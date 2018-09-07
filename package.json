@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue serve --open DemoPage.vue",
+    "test:unit": "vue-cli-service test:unit",
+    "build": "vue-cli-service build --target lib --name vue-bitbucket-collapsible src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vue/cli-plugin-unit-jest": "^3.0.1",
     "vue": "^2.5.17"
   },
   "devDependencies": {
