@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import CollapsiblePanel from './CollapsiblePanel';
+import CollapsiblePanel from './CollapsiblePanel.vue';
 import { shallowMount } from '@vue/test-utils';
 
 describe(`CollapsiblePanel`, () => {
