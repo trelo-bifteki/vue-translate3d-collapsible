@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue serve --open DemoPage.vue",
     "test:unit": "vue-cli-service test:unit",
+    "test:auto":"vue-cli-service test:unit --watch",
     "prebuild": "npm run eslint && npm run test:unit",
     "build": "vue-cli-service build --target lib --name vue-bitbucket-collapsible src/index.js",
     "eslint": "eslint 'src/**/*.vue' 'src/**/*.js'"

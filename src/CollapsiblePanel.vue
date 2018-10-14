@@ -20,6 +20,9 @@ export default {
       isExpanded: false,
     };
   },
+  beforeMount() {
+    this.isExpanded = this.expanded;
+  },
   methods: {
     toggle() {
       this.isExpanded = !this.isExpanded;
@@ -41,6 +44,7 @@ export default {
       <transition :name="transitionHeader">
         <div
           class="collapsible-panel__actions"
+          :aria-hidden="!isExpanded"
           v-if="isExpanded"
         >
           <slot name="actions"></slot>
