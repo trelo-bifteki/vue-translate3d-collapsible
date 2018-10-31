@@ -2,7 +2,7 @@
 export default {
   name: 'CollapsiblePanel',
   props: {
-    expanded: {
+    initExpanded: {
       type: Boolean,
       default: false,
     },
@@ -21,11 +21,14 @@ export default {
     };
   },
   beforeMount() {
-    this.isExpanded = this.expanded;
+    this.isExpanded = this.initExpanded;
   },
   methods: {
     toggle() {
       this.isExpanded = !this.isExpanded;
+      this.$emit('onToggle', {
+        isExpanded: this.isExpanded,
+      });
     }
   }
 };
@@ -33,6 +36,10 @@ export default {
 <template>
   <div class="collapsible-panel">
     <div class="collapsible-panel__header">
+      <div
+        class="collapsible-panel__triangle"
+        :class="{ 'collapsible-panel__triangle--expanded': isExpanded }"
+      ></div>
       <button
         class="collapsible-panel__headline"
         :aria-expanded="isExpanded"
@@ -79,7 +86,9 @@ export default {
   }
 
   .collapsible-panel__header {
-    border-bottom: 1px solid #666;
+    align-items: center;
+    border-bottom: 1px solid #DFDFDF;
+    color: #333;
     display: flex;
     padding: 0.3rem;
   }
@@ -87,8 +96,21 @@ export default {
   .collapsible-panel__headline {
     background-color: transparent;
     border: none;
-    padding: 0;
+    padding: 0.3rem 0;
     margin: 0;
+  }
+
+  .collapsible-panel__triangle {
+    border-color: transparent transparent transparent #333;
+    border-style: solid;
+    border-width: 0.3rem 0 0.3rem 0.6rem;
+    margin-right: 0.3rem;
+    transform: rotate(360deg);
+    transition: transform .33s ease-out;
+  }
+
+  .collapsible-panel__triangle--expanded {
+    transform: rotate(450deg);
   }
 
   .fade-bottom-enter-active, .fade-bottom-leave-active {
@@ -101,7 +123,6 @@ export default {
   .fade-bottom-enter, .fade-bottom-leave-to /* .fade-leave-active below version 2.1.8 */ {
     transform: scaleY(0);
   }
-
 
   .fade-enter-active, .fade-leave-active {
     transition: transform .33s  ease-out;

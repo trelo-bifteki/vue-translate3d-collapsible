@@ -4,10 +4,10 @@ import CollapsiblePanel from './CollapsiblePanel.vue';
 import { shallowMount } from '@vue/test-utils';
 
 describe(`CollapsiblePanel`, () => {
-  const createWrapper = expanded => {
+  const createWrapper = initExpanded => {
     return shallowMount(CollapsiblePanel, {
       propsData: {
-        expanded,
+        initExpanded,
       },
     });
   };
@@ -34,6 +34,22 @@ describe(`CollapsiblePanel`, () => {
     expect(
       wrapper.contains(`.collapsible-panel__actions`)
     ).toBe(true);
+  });
+
+  it(`shows triangle icon heading down when expanded is true`, () => {
+        const wrapper = createWrapper(true);
+
+        expect(
+          wrapper.contains(`.collapsible-panel__triangle--expanded`)
+        ).toBe(true);
+  });
+
+  it(`shows triangle icon heading down when expanded is true`, () => {
+        const wrapper = createWrapper(false);
+
+        expect(
+          wrapper.contains(`.collapsible-panel__triangle`)
+        ).toBe(true);
   });
 
   it(`hides actions container when expanded is false`, () => {

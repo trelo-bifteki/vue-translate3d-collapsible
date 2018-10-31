@@ -1,19 +1,34 @@
 <script>
-  import { CollapsiblePanel } from './src';
+  import CollapsiblePanel from './src';
 
   export default {
     name: `DemoPage`,
     components: {
       CollapsiblePanel,
-    }
-  }
+    },
+    data() {
+      return {
+        isExpanded: false,
+      };
+    },
+    methods: {
+      handleToggle({ isExpanded }) {
+        this.isExpanded = isExpanded;
+      },
+    },
+  };
 </script>
 <template>
 <div class="example">
   <h1>Collapsible panel demo</h1>
-  <CollapsiblePanel  class="example-2" :expanded="true">
-    <div slot="header">Hello there</div>
-    <div slot="actions"><button>Hello</button></div>
+  <h2>Expanded? {{ this.isExpanded }}</h2>
+  <CollapsiblePanel
+     class="example-2"
+      :initExpanded="isExpanded"
+      @onToggle="handleToggle"
+   >
+    <div slot="header">Howdy stranger</div>
+    <div slot="actions"><button>rate me</button></div>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
