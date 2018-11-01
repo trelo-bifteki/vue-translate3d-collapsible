@@ -28,7 +28,7 @@
       @onToggle="handleToggle"
    >
     <div slot="header">Howdy stranger</div>
-    <div slot="actions"><button>rate me</button></div>
+    <div slot="actions"><a href="#">rate me</a></div>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
