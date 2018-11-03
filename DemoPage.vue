@@ -23,7 +23,7 @@
   <h1>Collapsible panel demo</h1>
   <h2>Expanded? {{ this.isExpanded }}</h2>
   <CollapsiblePanel
-     class="example-2"
+     class="accordion-item"
       :initExpanded="isExpanded"
       @onToggle="handleToggle"
    >
@@ -36,11 +36,17 @@
      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
      mollit anim id est laborum.
   </CollapsiblePanel>
+  <CollapsiblePanel
+    class="accordion-item"
+  >
+    <div slot="header">This is a collpasible demo</div>
+    Try adding more items for fun!
+</CollapsiblePanel>
 </div>
 </template>
 
 <style>
-  .example-2 {
+  .accordion-item {
     max-width: 40rem;
   }
 </style>

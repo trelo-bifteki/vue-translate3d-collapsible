@@ -96,15 +96,17 @@ export default {
   .collapsible-panel__headline {
     background-color: transparent;
     border: none;
-    padding: 0.3rem 0;
+    color: #666;
+    cursor: pointer;
     margin: 0;
+    padding: 0.3rem 0;
   }
 
   .collapsible-panel__triangle {
     border-color: transparent transparent transparent #333;
     border-style: solid;
-    border-width: 0.3rem 0 0.3rem 0.6rem;
-    margin-right: 0.3rem;
+    border-width: 0.4rem 0 0.4rem 0.6rem;
+    margin-right: 0.5rem;
     transform: rotate(360deg);
     transition: transform .33s ease-out;
   }
