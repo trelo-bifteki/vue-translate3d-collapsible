@@ -1,9 +1,14 @@
-# vue-bitbucket-collapsible
+# vue-translate3d-collapsible
 
 ## About
 
 This is a simple collapsible pattern inspired by the collapsibles used
 in Bitbucket.
+
+It includes the following features:
+- ARIA specifications
+- CSS3 animations (translate3d) that needs *no javascript hacks*
+
 
 ## Project setup
 ```

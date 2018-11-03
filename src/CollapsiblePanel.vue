@@ -120,7 +120,7 @@ export default {
     transform-origin: bottom;
   }
 
-  .fade-bottom-enter, .fade-bottom-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  .fade-bottom-enter, .fade-bottom-leave-to {
     transform: scaleY(0);
   }
 
@@ -131,7 +131,7 @@ export default {
     transform-origin: top;
   }
 
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  .fade-enter, .fade-leave-to  {
     transform: scaleY(0);
   }
 </style>
