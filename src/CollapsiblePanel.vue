@@ -2,7 +2,7 @@
 export default {
   name: 'CollapsiblePanel',
   props: {
-    initExpanded: {
+    isExpanded: {
       type: Boolean,
       default: false,
     },
@@ -15,22 +15,6 @@ export default {
       default: 'fade-bottom',
     }
   },
-  data() {
-    return {
-      isExpanded: false,
-    };
-  },
-  beforeMount() {
-    this.isExpanded = this.initExpanded;
-  },
-  methods: {
-    toggle() {
-      this.isExpanded = !this.isExpanded;
-      this.$emit('onToggle', {
-        isExpanded: this.isExpanded,
-      });
-    }
-  }
 };
 </script>
 <template>
@@ -44,7 +28,7 @@ export default {
         class="collapsible-panel__headline"
         :aria-expanded="isExpanded"
         aria-controls="collapsible-0"
-        v-on:click="toggle"
+        v-on:click="$emit('onToggle', isExpanded)"
       >
         <slot name="header"></slot>
       </button>

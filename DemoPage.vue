@@ -9,12 +9,16 @@
     data() {
       return {
         isExpanded: false,
+        isSecondExpanded: true,
       };
     },
     methods: {
-      handleToggle({ isExpanded }) {
-        this.isExpanded = isExpanded;
+      handleToggle(isExpanded) {
+        this.isExpanded = !isExpanded;
       },
+      handleSecondToggle(isExpanded) {
+        this.isSecondExpanded = !isExpanded;
+      }
     },
   };
 </script>
@@ -24,7 +28,7 @@
   <h2>Expanded? {{ this.isExpanded }}</h2>
   <CollapsiblePanel
      class="accordion-item"
-      :initExpanded="isExpanded"
+      :isExpanded="isExpanded"
       @onToggle="handleToggle"
    >
     <div slot="header">Howdy stranger</div>
@@ -38,6 +42,8 @@
   </CollapsiblePanel>
   <CollapsiblePanel
     class="accordion-item"
+    :isExpanded="isSecondExpanded"
+    @onToggle="handleSecondToggle"
   >
     <div slot="header">This is a collpasible demo</div>
     Try adding more items for fun!
