@@ -4,10 +4,10 @@ import CollapsiblePanel from './CollapsiblePanel.vue';
 import { shallowMount } from '@vue/test-utils';
 
 describe(`CollapsiblePanel`, () => {
-  const createWrapper = initExpanded => {
+  const createWrapper = isExpanded => {
     return shallowMount(CollapsiblePanel, {
       propsData: {
-        initExpanded,
+        isExpanded,
       },
     });
   };
