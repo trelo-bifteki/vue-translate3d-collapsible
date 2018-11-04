@@ -27,7 +27,8 @@
     "test:auto": "vue-cli-service test:unit --watch",
     "prebuild": "npm run eslint && npm run test:unit",
     "build": "vue-cli-service build --target lib --name vue-translate3d-collapsible src/index.js",
-    "eslint": "eslint 'DemoPage.vue' 'src/**/*.vue' 'src/**/*.js'"
+    "eslint": "eslint 'DemoPage.vue' 'src/**/*.vue' 'src/**/*.js'",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "vue": "^2.5.17"
