@@ -9,11 +9,13 @@
     "dist/*"
   ],
   "keywords": [
+    "vuejs2",
     "collapsible",
     "accessible",
     "accordion",
     "extendable"
   ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trelo-bifteki/vue-translate3d-collapsible"

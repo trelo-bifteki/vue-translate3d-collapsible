@@ -9,6 +9,12 @@ It includes the following features:
 - ARIA specifications
 - CSS3 animations (translate3d) that needs *no javascript hacks*
 
+## install
+
+```
+npm install vue-translate3d-collapsible 
+```
+
 ## Why translate3d animations?
 
 This is an animation that requires no *hacks* for setting the height of the panel in
