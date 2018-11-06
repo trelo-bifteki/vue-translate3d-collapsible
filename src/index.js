@@ -1,3 +1,5 @@
 import CollapsiblePanel from './CollapsiblePanel';
 
-export default CollapsiblePanel;
+export {
+  CollapsiblePanel,
+};

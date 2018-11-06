@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "author": "Lampros Papadimitriou",
   "description": "A simple collapsible using translate3d animations",
-  "main": "dist/vue-translate3d-collapsible.umd.js",
-  "module": "dist/vue-translate3d-collapsible.umd.min.js",
+  "main": "dist/vue-translate3d-collapsible.common.js",
   "files": [
     "dist/*"
   ],
