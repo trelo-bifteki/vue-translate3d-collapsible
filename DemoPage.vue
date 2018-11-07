@@ -1,5 +1,5 @@
 <script>
-  import CollapsiblePanel from './src';
+  import { CollapsiblePanel } from './src';
 
   export default {
     name: `DemoPage`,
@@ -48,6 +48,14 @@
     <div slot="header">This is a collpasible demo</div>
     Try adding more items for fun!
 </CollapsiblePanel>
+<CollapsiblePanel
+  class="accordion-item"
+  :isExpanded="isSecondExpanded"
+  @onToggle="handleSecondToggle"
+>
+  Try adding more items for fun!
+</CollapsiblePanel>
+
 </div>
 </template>
 
