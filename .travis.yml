@@ -1,4 +1,8 @@
 language: node_js
 node_js:
  - "node"
-script: npm run build
+install:
+ - npm install -g codecov
+script:
+ - npm run build
+ - codecov

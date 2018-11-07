@@ -20,4 +20,6 @@ module.exports = {
     `**/*.spec.js`,
   ],
   testURL: `http://localhost/`,
+  collectCoverage: true,
+  coverageDirectory: "./coverage",
 };
