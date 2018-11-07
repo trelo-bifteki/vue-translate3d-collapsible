@@ -30,6 +30,14 @@ export default {
 </script>
 ```
 
+Add the layout styles in your application
+```
+<style>
+
+@import "../node_modules/vue-translate3d-collapsible/dist/vue-translated3d-collapsible.css"
+
+</style>
+```
 ## Why translate3d animations?
 
 This is an animation that requires no *hacks* for setting the height of the panel in
