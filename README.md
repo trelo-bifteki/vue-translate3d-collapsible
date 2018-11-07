@@ -1,5 +1,7 @@
 # vue-translate3d-collapsible
 
+[![Build Status](https://travis-ci.org/trelo-bifteki/vue-translate3d-collapsible.svg?branch=master)](https://travis-ci.org/trelo-bifteki/vue-translate3d-collapsible)
+
 ## About
 
 This is a simple collapsible pattern inspired by the collapsibles used
