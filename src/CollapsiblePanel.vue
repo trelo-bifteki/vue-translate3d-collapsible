@@ -20,16 +20,17 @@ export default {
 <template>
   <div class="collapsible-panel">
     <div class="collapsible-panel__header">
-      <div
-        class="collapsible-panel__triangle"
-        :class="{ 'collapsible-panel__triangle--expanded': isExpanded }"
-      ></div>
       <button
         class="collapsible-panel__headline"
         :aria-expanded="isExpanded"
         aria-controls="collapsible-0"
         v-on:click="$emit('onToggle', isExpanded)"
       >
+        <div
+          class="collapsible-panel__triangle"
+          :class="{ 'collapsible-panel__triangle--expanded': isExpanded }"
+        ></div>
+
         <slot name="header"></slot>
       </button>
       <transition :name="transitionHeader">
@@ -78,10 +79,12 @@ export default {
   }
 
   .collapsible-panel__headline {
+    align-items: center;
     background-color: transparent;
     border: none;
     color: #666;
     cursor: pointer;
+    display: flex;
     margin: 0;
     padding: 0.3rem 0;
   }
