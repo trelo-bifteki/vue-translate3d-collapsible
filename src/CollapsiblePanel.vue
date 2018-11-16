@@ -1,4 +1,6 @@
 <script>
+import IconArrow from './IconArrow.vue';
+
 export default {
   name: 'CollapsiblePanel',
   props: {
@@ -15,6 +17,9 @@ export default {
       default: 'fade-bottom',
     }
   },
+  components: {
+    IconArrow,
+  }
 };
 </script>
 <template>
@@ -26,10 +31,11 @@ export default {
         aria-controls="collapsible-0"
         v-on:click="$emit('onToggle', isExpanded)"
       >
-        <div
-          class="collapsible-panel__triangle"
-          :class="{ 'collapsible-panel__triangle--expanded': isExpanded }"
-        ></div>
+        <IconArrow
+          color="#333"
+          class="collapsible-panel__arrow"
+          :class="{ 'collapsible-panel__arrow--expanded': isExpanded }"
+        />
 
         <slot name="header"></slot>
       </button>
@@ -65,6 +71,18 @@ export default {
     text-align: right;
   }
 
+  .collapsible-panel__arrow {
+    max-height: 1rem;
+    max-width: 1rem;
+    margin-right: 0.5rem;
+    transform: rotate(-90deg);
+    transition: transform .33s ease-out;
+  }
+
+  .collapsible-panel__arrow--expanded {
+    transform: rotate(0deg);
+  }
+
   .collapsible-panel__container {
     margin: 0;
     padding: 0.3rem;
@@ -87,19 +105,6 @@ export default {
     display: flex;
     margin: 0;
     padding: 0.3rem 0;
-  }
-
-  .collapsible-panel__triangle {
-    border-color: transparent transparent transparent #333;
-    border-style: solid;
-    border-width: 0.4rem 0 0.4rem 0.6rem;
-    margin-right: 0.5rem;
-    transform: rotate(360deg);
-    transition: transform .33s ease-out;
-  }
-
-  .collapsible-panel__triangle--expanded {
-    transform: rotate(450deg);
   }
 
   .fade-bottom-enter-active, .fade-bottom-leave-active {

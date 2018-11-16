@@ -40,7 +40,7 @@ describe(`CollapsiblePanel`, () => {
         const wrapper = createWrapper(true);
 
         expect(
-          wrapper.contains(`.collapsible-panel__triangle--expanded`)
+          wrapper.contains(`.collapsible-panel__arrow--expanded`)
         ).toBe(true);
   });
 
@@ -48,7 +48,7 @@ describe(`CollapsiblePanel`, () => {
         const wrapper = createWrapper(false);
 
         expect(
-          wrapper.contains(`.collapsible-panel__triangle`)
+          wrapper.contains(`.collapsible-panel__arrow`)
         ).toBe(true);
   });
 
