@@ -1,6 +1,6 @@
 {
   "name": "vue-translate3d-collapsible",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Lampros Papadimitriou",
   "description": "A simple collapsible using translate3d animations",
   "main": "dist/vue-translate3d-collapsible.common.js",
@@ -33,20 +33,20 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@vue/cli": "^3.0.1",
-    "@vue/cli-plugin-babel": "^3.0.1",
-    "@vue/cli-plugin-eslint": "^3.0.1",
-    "@vue/cli-plugin-unit-jest": "^3.0.1",
-    "@vue/cli-service": "^3.0.1",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@vue/cli": "^3.3.0",
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-eslint": "^3.3.0",
+    "@vue/cli-plugin-unit-jest": "^3.3.0",
+    "@vue/cli-service": "^3.3.0",
     "@vue/test-utils": "^1.0.0-beta.25",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
     "babel-preset-env": "^1.7.0",
-    "eslint": "^5.5.0",
-    "vue": "^2.5.17",
-    "vue-template-compiler": "^2.5.17"
+    "eslint": "^5.12.0",
+    "vue": "^2.5.21",
+    "vue-template-compiler": "^2.5.21"
   },
   "postcss": {
     "plugins": {
