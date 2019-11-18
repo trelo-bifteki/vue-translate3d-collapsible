@@ -19,7 +19,22 @@ module.exports = {
   testMatch: [
     `**/*.spec.js`,
   ],
+  reporters: [
+    'default',
+    'jest-junit'
+  ],
+  coverageReporters: [
+    'text',
+    'cobertura'
+  ],
   testURL: `http://localhost/`,
   collectCoverage: true,
+  collectCoverageFrom: [
+    'src/**/*.vue',
+    'src/**/*.js',
+    '!**/node_modules/**',
+    '!test/**',
+    '!dist/**'
+  ],
   coverageDirectory: "./coverage",
 };
